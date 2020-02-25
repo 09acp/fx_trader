@@ -22,7 +22,9 @@ _FX_data folder_ - Script generates input data for modelling
   - [x] save as pickle "usd_eur_gadf.pkl"
 ~~_Toolbox_ - Script with helper functions
 - [ ] [toolbox](link)~~
-
+- [x] [ta_generator](LINK)
+  - [x] create technical analysis time-series
+  - [x] store in "database"
 #### __ML Classifiers__
 Non-ANN classifiers
 - [x] [ml_classifiers](https://github.com/09acp/fx_trader/blob/master/ml_classifiers.ipynb)  # scirpt
@@ -67,7 +69,17 @@ Trading agent backtest on model forecasts
   - Save to Database _"profitable_subgroups"_ . subgroup_trades.txt
 
 #### __Trading Dashboard (app)__
-Human-Model trading on trade subgroups - H2
+__TA subplot experiments__
+- [x] [ta_experiments](link)
+  - [x] Candle stick chart + Bollinger Bands
+  - [x] MACD signal + EMA + Hist  
+      - [Example 1](https://plot.ly/~roboluc/18/price-rsi-macd-signal/#plot)
+      - [Super MACD Example 2](https://plot.ly/~phil123/28/baba-macd-ema-of-macd-macd-signal-line/#/)
+  - [x] RSI
+  - [x] ADX
+  - [ ] [Mark crossovers on charts (RSI)](https://plot.ly/~roboluc/18/price-rsi-macd-signal/#plot)
+
+__Human-Model trading on trade subgroups - prototype__
 - [x] [eda_dash](https://github.com/09acp/fx_trader/blob/master/eda_dash.ipynb)
   - [x] 3D scatter plot for subgroups
   - [x] model sections -- "<font color=red> Not actually working </font>"--
@@ -78,25 +90,28 @@ Human-Model trading on trade subgroups - H2
   - [x] action checklist  (FIX NAMES ) -->> DROPDOWN INSTEAD
   - [x] ~~only-profitable subgroup checklist~~
         dataset selection dropdown (all_trades / subgroups)
-  - [x] **format layout**  - POSITIONING ISSUE -  
+  - [x] select feature for Z-axis
   - [x] correctly predicted checklist
-
-
   - [ ] **Dynamic Subplots** -> Price Series
-  ![eda_dash_v1](https://github.com/09acp/fx_trader/blob/master/images/eda_dash_v1.png?raw=true)
+    - [x] ~~hoverData~~ OR clickData for plots2
+      ![eda_dash_v1](https://github.com/09acp/fx_trader/blob/master/images/eda_dash_v1.png?raw=true)
+    - [x] Price chart  #test
+        - [x] Dynamic updates - click/selection on scatterplot
+    - [x] Candle sticks subplot 1
+        - [x] Dynamic updates - click/selection on scatterplot
+    - [x] TA_1 subplot 2
+    - [x] TA_2 subplot 3
+    - [x] TA_3 subplot 4
+  - [ ] Host dash on Heroku. [Example1](https://dash.plot.ly/deployment)
 
-    - [x] Price chart
-    - [x] Candle sticks
-        - [ ] Dynamic updates - click/selection on scatterplot --ISSUE--
-
-  - [ ] Subplot -> Cluster group stats
-  - [ ] Subplot -> pca results?
 
 
+  Cluster group stats ? # possible
+  pca results hovering over main graph?  # not many PC
 
 
   _H2: Human-Model trading profitability_
-  - [ ]
+  script that does that
 
   _H3: Test subgroup profitability on unseen data_
 
