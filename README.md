@@ -7,6 +7,13 @@ The second goal is to test the hypothesis that by visualising the prediction of 
 
 The final goal is to test the hypothesis that by visually evaluating the time-series of a potential trade (chosen subgroup), the trader can determine whether to go through with the trade or not, hence adding human expertise into the trading system. This evaluation will be executed through a slick Dash browser app.
 "
+
+"""
+df['Correct']
+Correct Column (1:Prediction Correct, 0:Prediction Wrong)
+ScatterPlot (1:Diamond, 0:Cross)
+Action (1:Buy, 0:Sell)
+"""
 #### __Project Summary__
 - [ ] [one_pager](https://github.com/09acp/fx_trader/blob/master/one_pager.pptx)
 
@@ -102,16 +109,22 @@ __Human-Model trading on trade subgroups - prototype__
     - [x] TA_1 subplot 2
     - [x] TA_2 subplot 3
     - [x] TA_3 subplot 4
-  - [ ] Host dash on Heroku. [Example1](https://dash.plot.ly/deployment)
+_H2: Human-Model trading profitability_
+- [x] [evaluation](LINK)    
+  Creates df with 70 trades between 2009-2010, with an None 'Subjective_Decision' column and save to database.
+  - [ ] Open "sub_trade_eval" table in SQLite and manually fill NaN values.
 
+__Advanced Featues__
+  - [ ] Host dash on Heroku. [Example1](https://dash.plot.ly/deployment)
+  - [ ] Make notes to data points, save decisions, export.
+      - [experiment 1](https://community.plot.ly/t/saving-changes-in-table/8613)
 
 
   Cluster group stats ? # possible
   pca results hovering over main graph?  # not many PC
 
 
-  _H2: Human-Model trading profitability_
-  script that does that
+
 
   _H3: Test subgroup profitability on unseen data_
 
