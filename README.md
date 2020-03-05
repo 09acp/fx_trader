@@ -68,7 +68,7 @@ Trading agent backtest on model forecasts
     ![t-SNE clusters](https://github.com/09acp/fx_trader/blob/master/images/Cluster%20Subgroups%20(t-SNE).png?raw=true)
   - [ ] Add [surface](https://plot.ly/python/3d-surface-plots/) plane to the 3d plot (mean profitability)
 
-  _H1: In depth analysis of trade subgroups_
+  _H1: In depth analysis of trade subgroups_   *PROVED*
   Analyse trades according to various metrics
   - [x] Visual analysis of profitable trades
   - [x] Visual analysis of trades chronologically
@@ -99,7 +99,7 @@ __Human-Model trading on trade subgroups - prototype__
         dataset selection dropdown (all_trades / subgroups)
   - [x] select feature for Z-axis
   - [x] correctly predicted checklist
-  - [ ] **Dynamic Subplots** -> Price Series
+  - [x] **Dynamic Subplots** -> Price Series
     - [x] ~~hoverData~~ OR clickData for plots2
       ![eda_dash_v1](https://github.com/09acp/fx_trader/blob/master/images/eda_dash_v1.png?raw=true)
     - [x] Price chart  #test
@@ -109,34 +109,35 @@ __Human-Model trading on trade subgroups - prototype__
     - [x] TA_1 subplot 2
     - [x] TA_2 subplot 3
     - [x] TA_3 subplot 4
-_H2: Human-Model trading profitability_
+_H2: Human-Model trading profitability_   *PROVED*
 - [x] [evaluation](LINK)    
   Creates df with 70 trades between 2009-2010, with an None 'Subjective_Decision' column and save to database.
-  - [ ] Open "sub_trade_eval" table in SQLite and manually fill NaN values.
+  - [x] Open "sub_trade_eval" table in SQLite and manually fill NaN values.
 
-__Advanced Featues__
-  - [ ] Host dash on Heroku. [Example1](https://dash.plot.ly/deployment)
-  - [ ] Make notes to data points, save decisions, export.
+__Advanced Features__
+  - [x] Host dash on Heroku. [Example1](https://dash.plot.ly/deployment)
+  - [ ] ~~Make notes to data points, save decisions, export.~~
       - [experiment 1](https://community.plot.ly/t/saving-changes-in-table/8613)
 
-
-  Cluster group stats ? # possible
-  pca results hovering over main graph?  # not many PC
-
-
-
-
-  _H3: Test subgroup profitability on unseen data_
-
-
-#### __APP ???__
-- [ ] [script](link)
-  - [ ] Step 1
-  - [ ] Step 2
-
-**link images** from image folder
+__Forecasting__
+  Use unseen post 2010 data and hybrid trading
+  _H3: Test subgroup profitability on unseen data_   *?*
+  - [x] save K-means model
+  - [x] save LogisticR model
+  - [x] save scaler
+  - [x] [hybrid_trading_test](LINK)
+      - [x] download eur/usd 2010-2011 testdata
+      - [x] encode as GAF images
+      - [x] forecast LR with unseen data 1yr
+      - [x] build PCA with 2 components
+      - [x] create T-SNE with 2 components
+      - [x] load clustering algo and create assign groups for trades
+  - [ ] [eda_dash_v2](LINE)
+      __Strongly modified inputs so only 2010 data__
+      - [x] add test_set dataset to Dash platform
+      - [x] conduct and store hybrid analysis results for last 4 months
+      - [x] assess performance
 
 
 #### Additional Ideas
-- Use unseen data (post 2010) to see whether the profitability of subgroups holds up.
-  - ...
+=/=
