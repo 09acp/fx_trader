@@ -113,9 +113,13 @@ _H2: Human-Model trading profitability_   *PROVED*
 - [x] [evaluation](LINK)    
   Creates df with 70 trades between 2009-2010, with an None 'Subjective_Decision' column and save to database.
   - [x] Open "sub_trade_eval" table in SQLite and manually fill NaN values.
-
+  - Hybrid-match approach to trading more profitable than Model-based, and more accurate. 
+  ![Model-based](https://github.com/09acp/fx_trader/blob/master/images/h2_trading/trader_model__Profit.png?raw=true)
+  ![Hybrid-match](https://github.com/09acp/fx_trader/blob/master/images/h2_trading/trader_match__Profit.png?raw=true)
+  
 __Advanced Features__
   - [x] Host dash on Heroku. [Example1](https://dash.plot.ly/deployment)
+  - [Hosted App](https://dashboard.heroku.com/apps)
   - [ ] ~~Make notes to data points, save decisions, export.~~
       - [experiment 1](https://community.plot.ly/t/saving-changes-in-table/8613)
 
@@ -125,14 +129,14 @@ __Forecasting__
   - [x] save K-means model
   - [x] save LogisticR model
   - [x] save scaler
-  - [x] [hybrid_trading_test](LINK)
+  - [x] [hybrid_trading_test](https://github.com/09acp/fx_trader/blob/master/hybrid_trading_test.ipynb)
       - [x] download eur/usd 2010-2011 testdata
       - [x] encode as GAF images
       - [x] forecast LR with unseen data 1yr
       - [x] build PCA with 2 components
       - [x] create T-SNE with 2 components
       - [x] load clustering algo and create assign groups for trades
-  - [ ] [eda_dash_v2](LINE)
+  - [x] [eda_dash_v2](https://github.com/09acp/fx_trader/blob/master/eda_dash_v2.ipynb)
       __Strongly modified inputs so only 2010 data__
       - [x] add test_set dataset to Dash platform
       - [x] conduct and store hybrid analysis results for last 4 months
